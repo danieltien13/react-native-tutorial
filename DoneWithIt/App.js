@@ -10,7 +10,6 @@ import {
   Image,
   SafeAreaView,
   Alert,
-  Button,
   Platform,
   StatusBar,
   Dimensions,
@@ -21,10 +20,25 @@ import {
 } from "@react-native-community/hooks";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
-  // return <WelcomeScreen></WelcomeScreen>;
+  return <WelcomeScreen></WelcomeScreen>;
   return <ViewImageScreen></ViewImageScreen>;
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <AppButton
+        title="Login"
+        onPress={() => console.log("Tapped")}
+      ></AppButton>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
