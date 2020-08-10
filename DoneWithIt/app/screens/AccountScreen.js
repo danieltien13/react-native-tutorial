@@ -20,13 +20,12 @@ const menuItems = [
 export default function AccountScreen(props) {
   return (
     <Screen style={styles.screen}>
-      <View style={styles.container}>
-        <ListItem
-          title="Mosh Hamedani"
-          subTitle="programmingwithmosh@gmail.com"
-          image={require("../assets/mosh.jpg")}
-        ></ListItem>
-      </View>
+      <ListItem
+        title="Mosh Hamedani"
+        subTitle="programmingwithmosh@gmail.com"
+        image={require("../assets/mosh.jpg")}
+      ></ListItem>
+
       <View style={styles.container}>
         <FlatList
           data={menuItems}
@@ -61,5 +60,6 @@ const styles = StyleSheet.create({
   },
   screen: {
     backgroundColor: colors.light,
+    flex: 1,
   },
 });
